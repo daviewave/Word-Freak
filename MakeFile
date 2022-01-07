@@ -1,0 +1,12 @@
+SRC = main.c BSThashtable.c prepInput.c file_processing.c
+OBJ = main.o BSThashtable.o prepInput.o file_processing.o
+PROG = wordfreak;
+
+$(PROG):$(OBJ)
+  gcc $(OBJ) -o $(PROG)
+
+
+# dependencies
+main.o:  dependencies.h prepInput.h file_processing.h
+BSThashtable.o: dependencies.h BSThashtable.h
+prepInput.o: dependencies.h prepInput.h
